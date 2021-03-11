@@ -1,5 +1,7 @@
 package hospital;
 
+import hospital.exception.RemoveException;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
@@ -69,6 +71,32 @@ public class Department
                 '}';
     }
 
+    public void removePerson(Person person) throws RemoveException
+    {
+        if (person instanceof Employee)
+        {
+            if (employeeList.contains(person))
+            {
+                employeeList.remove(person);
+            }
+            else
+            {
+                throw new RemoveException("Employee not found in register");
+            }
+        }
+        else if (person instanceof Patient)
+        {
+            if (patientList.contains(person))
+            {
+                patientList.remove(person);
+            }
+            else
+            {
+                throw new RemoveException("Patient not found in register");
+            }
+        }
 
+
+    }
 
 }
