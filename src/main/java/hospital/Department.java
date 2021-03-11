@@ -14,41 +14,74 @@ public class Department
     List<Employee> employeeList = new ArrayList<>();
     List<Patient> patientList = new ArrayList<>();
 
+    /**
+     *
+     * @param departmentName
+     */
     public Department(String departmentName)
     {
         this.departmentName = departmentName;
     }
 
+    /**
+     *
+     * @param departmentName
+     */
     public void setDepartmentName(String departmentName)
     {
         this.departmentName = departmentName;
     }
 
+    /**
+     *
+     * @return
+     */
     public String getDepartmentName()
     {
         return departmentName;
     }
 
+    /**
+     *
+     * @return
+     */
     public List<Employee> getEmployeeList()
     {
         return employeeList;
     }
 
+    /**
+     *
+     * @param employee
+     */
     public void addEmployee(Employee employee)
     {
         employeeList.add(employee);
     }
 
+    /**
+     *
+     * @return
+     */
     public List<Patient> getPatientList()
     {
         return patientList;
     }
 
+    /**
+     *
+     * @param patient
+     */
     public void addPatient(Patient patient)
     {
         patientList.add(patient);
     }
 
+    /**
+     *
+     * @param o
+     * @return
+     */
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -57,11 +90,19 @@ public class Department
         return Objects.equals(getDepartmentName(), that.getDepartmentName()) && Objects.equals(getEmployeeList(), that.getEmployeeList()) && Objects.equals(getPatientList(), that.getPatientList());
     }
 
+    /**
+     *
+     * @return
+     */
     @Override
     public int hashCode() {
         return Objects.hash(getDepartmentName(), getEmployeeList(), getPatientList());
     }
 
+    /**
+     *
+     * @return
+     */
     @Override
     public String toString() {
         return "Department{" +
@@ -71,6 +112,11 @@ public class Department
                 '}';
     }
 
+    /**
+     *
+     * @param person
+     * @throws RemoveException
+     */
     public void removePerson(Person person) throws RemoveException
     {
         if (person instanceof Employee)

@@ -1,20 +1,38 @@
 package hospital;
 
+
 public class Patient extends Person implements Diagnosable
 {
 
+    /**
+     * Create info for a diagnosis
+     */
     private String diagnosis = "";
 
+    /**
+     *
+     * @return
+     */
     protected String getDiagnosis()
     {
         return diagnosis;
     }
 
-    protected Patient(String firstName, String lastName, String socialSecurityNumber)
+    /**
+     *
+     * @param firstName
+     * @param lastName
+     * @param socialSecurityNumber
+     */
+    public Patient(String firstName, String lastName, String socialSecurityNumber)
     {
         super(firstName, lastName, socialSecurityNumber);
     }
 
+    /**
+     *
+     * @return
+     */
     @Override
     public String toString() {
         return "Patient{" +
@@ -22,6 +40,10 @@ public class Patient extends Person implements Diagnosable
                 '}';
     }
 
+    /**
+     *
+     * @param diagnosis
+     */
     @Override
     public void setDiagnosis(String diagnosis) {
 
