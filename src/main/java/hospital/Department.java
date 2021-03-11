@@ -81,7 +81,7 @@ public class Department
             }
             else
             {
-                throw new RemoveException("Employee not found in register");
+                throw new RemoveException(person.getFullName() + " not found in register");
             }
         }
         else if (person instanceof Patient)
@@ -92,7 +92,7 @@ public class Department
             }
             else
             {
-                throw new RemoveException("Patient not found in register");
+                throw new RemoveException(person.getFullName() + " not found in register");
             }
         }
 
