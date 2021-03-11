@@ -1,6 +1,7 @@
 package hospital;
 
-public class Patient extends Person implements Diagnosable {
+public class Patient extends Person implements Diagnosable
+{
 
     private String diagnosis = "";
 

@@ -1,6 +1,7 @@
 package hospital;
 
-public abstract class Person {
+public abstract class Person
+{
 
     private String firstName;
     private String lastName;
